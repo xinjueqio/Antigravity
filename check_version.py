@@ -160,11 +160,12 @@ if __name__ == "__main__":
             with open(os.environ["GITHUB_OUTPUT"], "a") as f:
                 if 需要初始化:
                     import json
+                    # 关键优化：history 只包含比当前版更旧的版本，防止重复创建
+                    历史旧版本 = [项 for 项 in 历史版本列表 if 项["version"] != 最新主版本]
                     f.write(f"init=true\n")
-                    f.write(f"history={json.dumps(历史版本列表)}\n")
+                    f.write(f"history={json.dumps(历史旧版本)}\n")
                 
-                # 关键修复：如果是初始化，或者版本更新了，都执行备份
-                # 这样可以确保王校长第一次运行脚本时，即使 1.13.3 已经是最新，也会备份安装包
+                # 只要是初始化或者版本更新，都执行备份并标记为 updated
                 if 更新成功 or 需要初始化:
                     print(f"开始执行安装包备份流程 (原因: {'新版本' if 更新成功 else '初始化'})")
                     文件列表 = 下载安装包(最新主版本, 最新完整版本)
