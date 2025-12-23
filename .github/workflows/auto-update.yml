@@ -51,6 +51,8 @@ jobs:
           tag_name: v${{ steps.check.outputs.version }}
           name: Antigravity ${{ steps.check.outputs.version }}
           files: ${{ steps.check.outputs.assets }}
+          make_latest: true
+          overwrite: true
           body: |
             检测到 Antigravity 发布了新版本！
             
