@@ -17,6 +17,12 @@ jobs:
     outputs:
       init: ${{ steps.check.outputs.init }}
       history: ${{ steps.check.outputs.history }}
+      version_changed: ${{ steps.check.outputs.version_changed }}
+      readme_changed: ${{ steps.check.outputs.readme_changed }}
+      need_release: ${{ steps.check.outputs.need_release }}
+      version: ${{ steps.check.outputs.version }}
+      full_version: ${{ steps.check.outputs.full_version }}
+      assets: ${{ steps.check.outputs.assets }}
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
@@ -36,7 +42,8 @@ jobs:
         run: python check_version.py
 
       - name: 提交并推送更改
-        if: steps.check.outputs.updated == 'true'
+        # 只要 README 或版本变了就提交 (主要是为了更新首页的时间戳)
+        if: steps.check.outputs.readme_changed == 'true' || steps.check.outputs.version_changed == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -44,10 +51,12 @@ jobs:
           git diff --quiet && git diff --staged --quiet || (git commit -m "自动更新版本至 ${{ steps.check.outputs.version }}" && git push)
 
       - name: 列出下载的文件
+        if: steps.check.outputs.need_release == 'true'
         run: ls -lh Antigravity-* || echo "未发现待备份文件"
 
       - name: 创建最新 Release
-        if: steps.check.outputs.updated == 'true'
+        # 只有在需要发布新版（版本变动或初始化）时才执行
+        if: steps.check.outputs.need_release == 'true' && steps.check.outputs.init != 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.check.outputs.version }}
