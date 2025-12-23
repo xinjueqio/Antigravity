@@ -140,6 +140,14 @@ def 下载安装包(版本, 完整版本):
     return 已下载文件
 
 if __name__ == "__main__":
+    import sys
+    # 支持命令行参数直接下载指定版本 (用于历史版本备份)
+    if len(sys.argv) > 3 and sys.argv[1] == "--download":
+        版本 = sys.argv[2]
+        完整版本 = sys.argv[3]
+        下载安装包(版本, 完整版本)
+        sys.exit(0)
+
     # 历史版本数据
     历史版本列表 = [
         {"version": "1.11.2", "full_version": "1.11.2-6251250307170304"},
