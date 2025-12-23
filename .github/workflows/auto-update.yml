@@ -1,1 +1,104 @@
+name: 自动获取 Antigravity 版本
 
+on:
+  schedule:
+    - cron: '0 * * * *' # 每 1 小时运行一次
+  workflow_dispatch: # 支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  sync_and_release:
+    name: 检查、同步与发布
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      init: ${{ steps.check.outputs.init }}
+      history: ${{ steps.check.outputs.history }}
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 运行检查脚本
+        id: check
+        run: python check_version.py
+
+      - name: 提交并推送更改
+        if: steps.check.outputs.updated == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add VERSION README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "自动更新版本至 ${{ steps.check.outputs.version }}" && git push)
+
+      - name: 创建最新 Release
+        # 如果是初始化过程，Release 已经由“初始化历史版本”Job 创建，这里跳过
+        if: steps.check.outputs.updated == 'true' && steps.check.outputs.init != 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.check.outputs.version }}
+          name: Antigravity ${{ steps.check.outputs.version }}
+          files: ${{ steps.check.outputs.assets }}
+          body: |
+            检测到 Antigravity 发布了新版本！
+            
+            > [!IMPORTANT]
+            > **本 Release 已自动备份安装包附件。即使官网链接失效，您依然可以从下方的 Assets 区域下载。**
+            
+            版本号: `${{ steps.check.outputs.version }}`
+            下载页面: https://antigravity.google/download
+            
+            ### 官方下载链接 (可能失效):
+            Windows (x64): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ steps.check.outputs.full_version }}/windows-x64/Antigravity.exe)
+            Windows (ARM64): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ steps.check.outputs.full_version }}/windows-arm64/Antigravity.exe)
+            MacOS (Apple Silicon): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ steps.check.outputs.full_version }}/darwin-arm/Antigravity.dmg)
+            MacOS (Intel): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ steps.check.outputs.full_version }}/darwin-x64/Antigravity.dmg)
+            Linux: [前往官网下载](https://antigravity.google/download/linux)
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  init_history:
+    name: 初始化历史版本
+    needs: sync_and_release
+    if: needs.sync_and_release.outputs.init == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        item: ${{ fromJson(needs.sync_and_release.outputs.history) }}
+    steps:
+      - name: 创建历史 Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ matrix.item.version }}
+          name: Antigravity ${{ matrix.item.version }}
+          body: |
+            检测到 Antigravity 历史版本补全。
+            
+            版本号: `${{ matrix.item.version }}`
+            下载页面: https://antigravity.google/download
+            
+            Windows (x64): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ matrix.item.full_version }}/windows-x64/Antigravity.exe)
+            Windows (ARM64): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ matrix.item.full_version }}/windows-arm64/Antigravity.exe)
+            MacOS (Apple Silicon): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ matrix.item.full_version }}/darwin-arm/Antigravity.dmg)
+            MacOS (Intel): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ matrix.item.full_version }}/darwin-x64/Antigravity.dmg)
+            Linux: [前往官网下载](https://antigravity.google/download/linux)
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
