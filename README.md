@@ -3,16 +3,16 @@
 > [!TIP]
 > 本仓库由自动化脚本维护，每小时自动同步一次官网最新版本。
 
-## 🌟 当前最新版本: `1.13.3`
-**更新时间**: `2026-01-13 23:26:06`
+## 🌟 当前最新版本: `1.14.2`
+**更新时间**: `2026-01-14 01:30:13`
 
 ### 🚀 快速下载 (最新版)
 | 平台 | 架构 | 下载链接 |
 | :--- | :--- | :--- |
-| **Windows** | x64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.13.3-4533425205018624/windows-x64/Antigravity.exe) |
-| **Windows** | ARM64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.13.3-4533425205018624/windows-arm64/Antigravity.exe) |
-| **MacOS** | Apple Silicon | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.13.3-4533425205018624/darwin-arm/Antigravity.dmg) |
-| **MacOS** | Intel | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.13.3-4533425205018624/darwin-x64/Antigravity.dmg) |
+| **Windows** | x64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.14.2-6046590149459968/windows-x64/Antigravity.exe) |
+| **Windows** | ARM64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.14.2-6046590149459968/windows-arm64/Antigravity.exe) |
+| **MacOS** | Apple Silicon | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.14.2-6046590149459968/darwin-arm/Antigravity.dmg) |
+| **MacOS** | Intel | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.14.2-6046590149459968/darwin-x64/Antigravity.dmg) |
 | **Linux** | - | [前往官网下载](https://antigravity.google/download/linux) |
 
 ## 📜 历史版本记录
