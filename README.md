@@ -3,21 +3,22 @@
 > [!TIP]
 > 本仓库由自动化脚本维护，每小时自动同步一次官网最新版本。
 
-## 🌟 当前最新版本: `1.23.2`
-**更新时间**: `2026-05-19 16:27:47`
+## 🌟 当前最新版本: `2.0.0`
+**更新时间**: `2026-05-19 19:07:53`
 
 ### 🚀 快速下载 (最新版)
 | 平台 | 架构 | 下载链接 |
 | :--- | :--- | :--- |
-| **Windows** | x64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/windows-x64/Antigravity.exe) |
-| **Windows** | ARM64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/windows-arm64/Antigravity.exe) |
-| **MacOS** | Apple Silicon | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/darwin-arm/Antigravity.dmg) |
-| **MacOS** | Intel | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/darwin-x64/Antigravity.dmg) |
+| **Windows** | x64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.0-6324554176528384/windows-x64/Antigravity.exe) |
+| **Windows** | ARM64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.0-6324554176528384/windows-arm64/Antigravity.exe) |
+| **MacOS** | Apple Silicon | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.0-6324554176528384/darwin-arm/Antigravity.dmg) |
+| **MacOS** | Intel | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.0-6324554176528384/darwin-x64/Antigravity.dmg) |
 | **Linux** | - | [前往官网下载](https://antigravity.google/download/linux) |
 
 ## 📜 历史版本记录
 | 版本号 | Windows (x64) | MacOS (M系列) | MacOS (Intel) |
 | :--- | :--- | :--- | :--- |
+| `1.23.2` | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/windows-x64/Antigravity.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/darwin-arm/Antigravity.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/darwin-x64/Antigravity.dmg) |
 | `1.22.2` | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.22.2-5206900187463680/windows-x64/Antigravity.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.22.2-5206900187463680/darwin-arm/Antigravity.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.22.2-5206900187463680/darwin-x64/Antigravity.dmg) |
 | `1.21.9` | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.21.9-4905428782546944/windows-x64/Antigravity.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.21.9-4905428782546944/darwin-arm/Antigravity.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.21.9-4905428782546944/darwin-x64/Antigravity.dmg) |
 | `1.21.6` | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.21.6-5723021441368064/windows-x64/Antigravity.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.21.6-5723021441368064/darwin-arm/Antigravity.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.21.6-5723021441368064/darwin-x64/Antigravity.dmg) |
