@@ -9,20 +9,11 @@ permissions:
   contents: write
 
 jobs:
-  sync_and_release:
+  sync:
     name: 检查与同步
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    outputs:
-      init: ${{ steps.check.outputs.init }}
-      history: ${{ steps.check.outputs.history }}
-      version_changed: ${{ steps.check.outputs.version_changed }}
-      readme_changed: ${{ steps.check.outputs.readme_changed }}
-      need_release: ${{ steps.check.outputs.need_release }}
-      version: ${{ steps.check.outputs.version }}
-      full_version: ${{ steps.check.outputs.full_version }}
-      assets: ${{ steps.check.outputs.assets }}
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
@@ -48,117 +39,3 @@ jobs:
           git config --local user.name "GitHub Action"
           git add VERSION README.md history.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "自动更新版本至 ${{ steps.check.outputs.version }}" && git push)
-
-      - name: 备份安装包
-        if: steps.check.outputs.need_release == 'true'
-        run: |
-          # 已经在脚本中下载好了，这里只是为了在日志中确认
-          ls -lh Antigravity-* || echo "未发现待备份文件"
-
-      - name: 上传安装包作为 Artifact (临时存储)
-        if: steps.check.outputs.need_release == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: installer-assets
-          path: Antigravity-*
-          retention-days: 1
-
-  init_history:
-    name: 初始化历史版本
-    needs: sync_and_release
-    if: needs.sync_and_release.outputs.init == 'true'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    strategy:
-      max-parallel: 1 # 严格串行执行，确保顺序
-      matrix:
-        item: ${{ fromJson(needs.sync_and_release.outputs.history) }}
-    steps:
-      - name: 检出代码
-        uses: actions/checkout@v4
-
-      - name: 设置 Python 环境
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: 安装依赖
-        run: pip install requests
-
-      - name: 下载历史版本安装包
-        run: python check_version.py --download ${{ matrix.item.version }} ${{ matrix.item.full_version }}
-
-      - name: 创建历史 Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: v${{ matrix.item.version }}
-          name: Antigravity ${{ matrix.item.version }}
-          files: |
-            Antigravity-*
-          overwrite: true
-          body: |
-            检测到 Antigravity 历史版本补全。
-            
-            > [!IMPORTANT]
-            > **本 Release 已自动备份历史版本安装包附件。**
-            
-            版本号: `${{ matrix.item.version }}`
-            下载页面: https://antigravity.google/download
-            
-            Windows (x64): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ matrix.item.full_version }}/windows-x64/Antigravity.exe)
-            Windows (ARM64): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ matrix.item.full_version }}/windows-arm64/Antigravity.exe)
-            MacOS (Apple Silicon): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ matrix.item.full_version }}/darwin-arm/Antigravity.dmg)
-            MacOS (Intel): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ matrix.item.full_version }}/darwin-x64/Antigravity.dmg)
-            Linux: [前往官网下载](https://antigravity.google/download/linux)
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  latest_release:
-    name: 发布最新版本
-    needs: [sync_and_release, init_history]
-    if: |
-      always() && 
-      needs.sync_and_release.result == 'success' && 
-      needs.sync_and_release.outputs.need_release == 'true' &&
-      (needs.init_history.result == 'success' || needs.init_history.result == 'skipped')
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: 下载安装包 Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: installer-assets
-
-      - name: 创建最新 Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: v${{ needs.sync_and_release.outputs.version }}
-          name: Antigravity ${{ needs.sync_and_release.outputs.version }}
-          files: |
-            Antigravity-*
-          make_latest: true
-          overwrite: true
-          fail_on_unmatched_files: true
-          body: |
-            检测到 Antigravity 发布了新版本！
-            
-            > [!IMPORTANT]
-            > **本 Release 已自动备份安装包附件。即使官网链接失效，您依然可以从下方的 Assets 区域下载。**
-            
-            版本号: `${{ needs.sync_and_release.outputs.version }}`
-            下载页面: https://antigravity.google/download
-            
-            ### 官方下载链接 (可能失效):
-            Windows (x64): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ needs.sync_and_release.outputs.full_version }}/windows-x64/Antigravity.exe)
-            Windows (ARM64): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ needs.sync_and_release.outputs.full_version }}/windows-arm64/Antigravity.exe)
-            MacOS (Apple Silicon): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ needs.sync_and_release.outputs.full_version }}/darwin-arm/Antigravity.dmg)
-            MacOS (Intel): [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/${{ needs.sync_and_release.outputs.full_version }}/darwin-x64/Antigravity.dmg)
-            Linux: [前往官网下载](https://antigravity.google/download/linux)
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
