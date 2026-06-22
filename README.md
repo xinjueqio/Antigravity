@@ -3,7 +3,7 @@
 > [!TIP]
 > 本仓库由自动化脚本维护，每小时直接同步官网 releases 接口。
 
-**更新时间**: `2026-06-16 22:02:02`
+**更新时间**: `2026-06-22 21:08:32`
 
 ## 当前新版: Antigravity 2.0
 
@@ -41,26 +41,27 @@
 
 > 该通道保留在底部作为旧版下载入口。
 
-### 旧版最新版本: `2.0.4`
+### 旧版最新版本: `2.1.1`
 
-完整版本: `2.0.4-6381998290370560`
+完整版本: `2.1.1-6123990880747520`
 
 ### 快速下载
 
 | 平台 | 版本号 | 架构 | 下载链接 |
 | :--- | :--- | :--- | :--- |
-| **Windows** | `2.0.4` | x64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/windows-x64/Antigravity%20IDE.exe) |
-| **Windows** | `2.0.4` | ARM64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/windows-arm64/Antigravity%20IDE.exe) |
-| **macOS** | `2.0.4` | Apple Silicon | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/darwin-arm/Antigravity%20IDE.dmg) |
-| **macOS** | `2.0.4` | Intel | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/darwin-x64/Antigravity%20IDE.dmg) |
-| **Linux** | `2.0.4` | x64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/linux-x64/Antigravity%20IDE.tar.gz) |
-| **Linux** | `2.0.4` | ARM64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/linux-arm/Antigravity%20IDE.tar.gz) |
+| **Windows** | `2.1.1` | x64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.1.1-6123990880747520/windows-x64/Antigravity%20IDE.exe) |
+| **Windows** | `2.1.1` | ARM64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.1.1-6123990880747520/windows-arm64/Antigravity%20IDE.exe) |
+| **macOS** | `2.1.1` | Apple Silicon | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.1.1-6123990880747520/darwin-arm/Antigravity%20IDE.dmg) |
+| **macOS** | `2.1.1` | Intel | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.1.1-6123990880747520/darwin-x64/Antigravity%20IDE.dmg) |
+| **Linux** | `2.1.1` | x64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.1.1-6123990880747520/linux-x64/Antigravity%20IDE.tar.gz) |
+| **Linux** | `2.1.1` | ARM64 | [点击下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.1.1-6123990880747520/linux-arm/Antigravity%20IDE.tar.gz) |
 
 <details open>
 <summary>历史版本记录</summary>
 
 | 版本号 | 构建 ID | Windows x64 | Windows ARM64 | macOS Apple Silicon | macOS Intel | Linux x64 | Linux ARM64 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `2.0.4` | `6381998290370560` | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/windows-x64/Antigravity%20IDE.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/windows-arm64/Antigravity%20IDE.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/darwin-arm/Antigravity%20IDE.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/darwin-x64/Antigravity%20IDE.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/linux-x64/Antigravity%20IDE.tar.gz) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/linux-arm/Antigravity%20IDE.tar.gz) |
 | `2.0.3` | `6242596486512640` | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.3-6242596486512640/windows-x64/Antigravity%20IDE.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.3-6242596486512640/windows-arm64/Antigravity%20IDE.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.3-6242596486512640/darwin-arm/Antigravity%20IDE.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.3-6242596486512640/darwin-x64/Antigravity%20IDE.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.3-6242596486512640/linux-x64/Antigravity%20IDE.tar.gz) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.3-6242596486512640/linux-arm/Antigravity%20IDE.tar.gz) |
 | `2.0.2` | `5949548972081152` | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.2-5949548972081152/windows-x64/Antigravity%20IDE.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.2-5949548972081152/windows-arm64/Antigravity%20IDE.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.2-5949548972081152/darwin-arm/Antigravity%20IDE.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.2-5949548972081152/darwin-x64/Antigravity%20IDE.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.2-5949548972081152/linux-x64/Antigravity%20IDE.tar.gz) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.2-5949548972081152/linux-arm/Antigravity%20IDE.tar.gz) |
 | `2.0.1` | `4861014005645312` | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.1-4861014005645312/windows-x64/Antigravity%20IDE.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.1-4861014005645312/windows-arm64/Antigravity%20IDE.exe) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.1-4861014005645312/darwin-arm/Antigravity%20IDE.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.1-4861014005645312/darwin-x64/Antigravity%20IDE.dmg) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.1-4861014005645312/linux-x64/Antigravity%20IDE.tar.gz) | [下载](https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.1-4861014005645312/linux-arm/Antigravity%20IDE.tar.gz) |
