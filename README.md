@@ -3,30 +3,31 @@
 > [!TIP]
 > 本仓库由自动化脚本维护，每小时直接同步官网 releases 接口。
 
-**更新时间**: `2026-09-23 20:07:36`
+**更新时间**: `2026-09-29 00:54:55`
 
 ## 当前新版: Antigravity 2.0
 
-### 最新版本: `2.17.0`
+### 最新版本: `2.18.1`
 
-完整版本: `2.17.0-5217732355031040`
+完整版本: `2.18.1-4945794252537856`
 
 ### 快速下载
 
 | 平台 | 版本号 | 架构 | 下载链接 |
 | :--- | :--- | :--- | :--- |
-| **Windows** | `2.17.0` | x64 | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/windows-x64/Antigravity-x64.exe) |
-| **Windows** | `2.17.0` | ARM64 | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/windows-arm/Antigravity-arm64.exe) |
-| **macOS** | `2.17.0` | Apple Silicon | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/darwin-arm/Antigravity.dmg) |
-| **macOS** | `2.17.0` | Intel | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/darwin-x64/Antigravity.dmg) |
-| **Linux** | `2.17.0` | x64 | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/linux-x64/Antigravity.tar.gz) |
-| **Linux** | `2.17.0` | ARM64 | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/linux-arm/Antigravity.tar.gz) |
+| **Windows** | `2.18.1` | x64 | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.18.1-4945794252537856/windows-x64/Antigravity-x64.exe) |
+| **Windows** | `2.18.1` | ARM64 | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.18.1-4945794252537856/windows-arm/Antigravity-arm64.exe) |
+| **macOS** | `2.18.1` | Apple Silicon | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.18.1-4945794252537856/darwin-arm/Antigravity.dmg) |
+| **macOS** | `2.18.1` | Intel | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.18.1-4945794252537856/darwin-x64/Antigravity.dmg) |
+| **Linux** | `2.18.1` | x64 | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.18.1-4945794252537856/linux-x64/Antigravity.tar.gz) |
+| **Linux** | `2.18.1` | ARM64 | [点击下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.18.1-4945794252537856/linux-arm/Antigravity.tar.gz) |
 
 <details open>
 <summary>Antigravity 2.0 历史版本</summary>
 
 | 版本号 | 构建 ID | Windows x64 | Windows ARM64 | macOS Apple Silicon | macOS Intel | Linux x64 | Linux ARM64 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `2.17.0` | `5217732355031040` | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/windows-x64/Antigravity-x64.exe) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/windows-arm/Antigravity-arm64.exe) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/darwin-arm/Antigravity.dmg) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/darwin-x64/Antigravity.dmg) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/linux-x64/Antigravity.tar.gz) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.17.0-5217732355031040/linux-arm/Antigravity.tar.gz) |
 | `2.16.0` | `4917332007583744` | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.16.0-4917332007583744/windows-x64/Antigravity-x64.exe) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.16.0-4917332007583744/windows-arm/Antigravity-arm64.exe) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.16.0-4917332007583744/darwin-arm/Antigravity.dmg) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.16.0-4917332007583744/darwin-x64/Antigravity.dmg) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.16.0-4917332007583744/linux-x64/Antigravity.tar.gz) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.16.0-4917332007583744/linux-arm/Antigravity.tar.gz) |
 | `2.15.1` | `5880727900913664` | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.1-5880727900913664/windows-x64/Antigravity-x64.exe) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.1-5880727900913664/windows-arm/Antigravity-arm64.exe) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.1-5880727900913664/darwin-arm/Antigravity.dmg) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.1-5880727900913664/darwin-x64/Antigravity.dmg) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.1-5880727900913664/linux-x64/Antigravity.tar.gz) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.1-5880727900913664/linux-arm/Antigravity.tar.gz) |
 | `2.15.0` | `6576870427328512` | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.0-6576870427328512/windows-x64/Antigravity-x64.exe) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.0-6576870427328512/windows-arm/Antigravity-arm64.exe) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.0-6576870427328512/darwin-arm/Antigravity.dmg) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.0-6576870427328512/darwin-x64/Antigravity.dmg) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.0-6576870427328512/linux-x64/Antigravity.tar.gz) | [下载](https://storage.googleapis.com/antigravity-public/antigravity-hub/2.15.0-6576870427328512/linux-arm/Antigravity.tar.gz) |
