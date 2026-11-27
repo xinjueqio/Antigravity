@@ -23,7 +23,7 @@ import requests
     },
     "antigravity_ide": {
         "名称": "Antigravity IDE",
-        "显示名": "Antigravity IDE（旧版）",
+        "显示名": "Antigravity IDE（vs codex版）",
         "接口": "https://antigravity-ide-auto-updater-974169037036.us-central1.run.app/releases",
         "标签前缀": "antigravity-ide",
         "资产前缀": "Antigravity-IDE",

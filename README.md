@@ -87,7 +87,7 @@
 
 ---
 
-## Antigravity IDE（旧版）
+## Antigravity IDE（vs codex版）
 
 > 该通道保留在底部作为旧版下载入口。
 
